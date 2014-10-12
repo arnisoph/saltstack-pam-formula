@@ -4,5 +4,5 @@ Debian:
     - libpam-modules
 RedHat:
   pkgs:
-    - pam {# TODO: is this correct? #}
+    - pam
 {% endload %}
