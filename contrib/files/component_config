@@ -1,0 +1,9 @@
+{%- for setting in component_config|default([]) -%}
+  {%- if setting.plain is defined -%}
+    {%- for line in setting.plain %}
+{{ line }}
+    {%- endfor -%}
+  {%- else %}
+{{ setting.facility ~ '\t' ~ setting.control|default('sufficient') ~ '\t' ~ setting.module ~ '\t' }}{% for a in setting.args|default([]) %}{{ a }} {% endfor %}
+  {%- endif -%}
+{%- endfor -%}

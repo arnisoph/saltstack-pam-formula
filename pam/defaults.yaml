@@ -1,0 +1,8 @@
+{% load_yaml as rawmap_osfam %}
+Debian:
+  pkgs:
+    - libpam-modules
+RedHat:
+  pkgs:
+    - pam {# TODO: is this correct? #}
+{% endload %}
